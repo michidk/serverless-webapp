@@ -1,0 +1,12 @@
+{
+    "name": "string-analyzer",
+    "version": "1.0.0",
+    "description": "FaaS function to analyze strings",
+    "author": "Michael Lohr <michael@lohr.dev>",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"No tests yet...\""
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

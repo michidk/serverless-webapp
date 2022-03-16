@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "terraform-ls.rootModules": [
+        "aws",
+        "azure",
+        "gcp"
+    ],
+    "files.exclude": {
+        "**/*.tfstate": true,
+        "**/*.tfstate.backup": true,
+        "**/*.lock.hcl": true,
+        "**/*.lock.info": true,
+        "**/.terraform": true
+    }
+}
