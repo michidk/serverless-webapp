@@ -21,28 +21,28 @@ The application itself is a simple text analysis service that comes with a web-b
 
 ## Contents
 
-The relevant parts of this repo are:
+The relevant parts of this repository are:
 
-| Folder | Description |
+| Folder/File | Description |
 | ---- | ----------- |
-| .devcontainer | The vscode devcontainer for this project |
-| .github | Reamde images etc |
-| .vscode | Visual Studio Code settings |
-| was | The AWS deployment |
-| azure | The Azure deployment |
-| common | Common parts of the deployments |
-| common/API | The OpenAPI config |
-| common/function | The code for the FaaS function |
-| common/website | The static website for the frontend |
+| .devcontainer/ | The vscode devcontainer for this project |
+| .github/ | Reamde images etc |
+| .vscode/ | Visual Studio Code settings |
+| aws/ | The AWS deployment |
+| azure/ | The Azure deployment |
+| common/ | Common parts of the deployments |
+| common/api/ | The OpenAPI config |
+| common/function/ | The code for the FaaS function |
+| common/website/ | The static website for the frontend |
 | common/mime-types.json | The MIME type definitions for uploads |
-| GCP | The GCP deployment |
+| gcp/ | The GCP deployment |
 | justfile | The just configuration |
 
 ## Setup
 
 You can start up this project rather quickly using the [vscode devcontainers](https://code.visualstudio.com/docs/remote/containers), which are based on Docker.
 
-Using the command runner [just](https://github.com/casey/just/), apply the Terraform configuration using `just apply <folder>`, with `aws`, `GCP` or `azure` as the folder name.
+Using the command runner [just](https://github.com/casey/just/), apply the Terraform configuration using `just apply <folder>`, with `aws`, `gcp` or `azure` as the folder name.
 
 ## The Architecture
 
