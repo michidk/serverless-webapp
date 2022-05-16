@@ -10,16 +10,27 @@ resource "google_project_service" "api_gateway" {
   disable_dependent_services = true
 }
 
+resource "google_api_gateway_api" "function" {
+  provider = google-beta
+  api_id   = var.project
+  project  = var.project
+}
+
+# Service account to call the function
 resource "google_service_account" "function" {
   project = var.project
   # cut down project name, if account_id would be longer than 24 characters
   account_id = "${substr(var.project, 0, 12)}-api-gateway"
 }
 
-resource "google_api_gateway_api" "function" {
-  provider = google-beta
-  api_id   = var.project
-  project  = var.project
+# Allow the service account to invoke the function
+resource "google_cloudfunctions_function_iam_member" "invoker" {
+  project        = var.project
+  region         = google_cloudfunctions_function.backend.region
+  cloud_function = google_cloudfunctions_function.backend.name
+
+  role   = "roles/cloudfunctions.invoker"
+  member = "serviceAccount:${google_service_account.function.email}"
 }
 
 resource "google_api_gateway_api_config" "function" {

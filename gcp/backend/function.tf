@@ -14,9 +14,8 @@ resource "google_project_service" "cloud_build" {
   disable_dependent_services = true
 }
 
-
 resource "google_cloudfunctions_function" "backend" {
-  name    = "analyze"
+  name    = "${var.project}-function"
   project = var.project
   region  = var.region
 
@@ -27,14 +26,4 @@ resource "google_cloudfunctions_function" "backend" {
   source_archive_object = google_storage_bucket_object.function.name
   trigger_http          = true
   entry_point           = "handler"
-}
-
-# IAM entry for all users to invoke the function
-resource "google_cloudfunctions_function_iam_member" "invoker" {
-  project        = var.project
-  region         = google_cloudfunctions_function.backend.region
-  cloud_function = google_cloudfunctions_function.backend.name
-
-  role   = "roles/cloudfunctions.invoker"
-  member = "serviceAccount:${google_service_account.function.email}"
 }
