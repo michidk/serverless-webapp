@@ -25,18 +25,18 @@ The relevant parts of this repository are:
 
 | Folder/File | Description |
 | ---- | ----------- |
-| .devcontainer/ | The vscode devcontainer for this project |
-| .github/ | Reamde images etc |
-| .vscode/ | Visual Studio Code settings |
-| aws/ | The AWS deployment |
-| azure/ | The Azure deployment |
-| common/ | Common parts of the deployments |
-| common/api/ | The OpenAPI config |
-| common/function/ | The code for the FaaS function |
-| common/website/ | The static website for the frontend |
-| common/mime-types.json | The MIME type definitions for uploads |
-| gcp/ | The GCP deployment |
-| justfile | The just configuration |
+| [.devcontainer/](.devcontainer) | The [vscode devcontainer](https://code.visualstudio.com/docs/remote/containers) for this project |
+| [.github/](.github/) | Reamd resources |
+| [.vscode/](.vscode/) | [vscode](https://code.visualstudio.com/) settings |
+| [aws/](aws/) | The AWS deployment |
+| [azure/](azure/) | The Azure deployment |
+| [common/](common/) | Common parts of the deployments |
+| [common/api/](common/api/) | The OpenAPI config |
+| [common/function/](common/function/) | The code for the FaaS function |
+| [common/website/](common/website/) | The static website for the frontend |
+| [common/mime-types.json](common/mime-types.json) | The MIME type definitions for uploads |
+| [gcp/](gcp/) | The GCP deployment |
+| [justfile](justfile) | The just configuration |
 
 ## Setup
 
