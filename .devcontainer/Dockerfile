@@ -86,6 +86,3 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash 
 RUN echo 'alias tf="terraform"' >> /home/vscode/.bashrc \
 && echo 'alias gc="gcloud"' >> /home/vscode/.bashrc \
 && echo 'alias j="just"' >> /home/vscode/.bashrc
-
-# Fixes
-RUN mkdir -p /home/vscode/.config/vscode-dev-containers && chmod -R 777 /home/vscode/.config/vscode-dev-containers
