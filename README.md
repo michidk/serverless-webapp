@@ -17,6 +17,7 @@ The goals of the Terraform deployments in this project are:
 - Move common parts out of the deployment
 
 The application itself is a simple text analysis service that comes with a web-based frontend:
+
 ![A screenshot of the sample web app](.github/images/screenshot.png)
 
 ## Contents
@@ -62,7 +63,7 @@ The application requires a frontend (a static website) and backend (based on [Fu
 
 - Functions can be called directly, bypassing the API Gateway
 - Terraform currently only supports one origin per API Gateway
-- Functions don't support ES6 style JavaScript modules (https://github.com/Azure/azure-functions-nodejs-worker/issues/104). However, this feature is in preview https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#ecmascript-modules
+- Functions don't support ES6-style JavaScript modules (https://github.com/Azure/azure-functions-nodejs-worker/issues/104). However, this feature is in preview https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#ecmascript-modules
 
 
 ### Google Cloud Platform
