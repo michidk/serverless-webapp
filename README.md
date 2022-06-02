@@ -9,12 +9,10 @@ The goal of this project is to make those three deployments as homogeneous as po
 
 The goals of the Terraform deployments in this project are:
 
-- Self-contained
 - Use only Serverless services
 - Use standards like OpenAPI
 - Make the architectures as homogeneous as possible
-- Apply best-practices
-- Move common parts out of the deployment
+- Self-contained / Move common parts out of the deployment
 
 The application itself is a simple text analysis service that comes with a web-based frontend:
 
