@@ -21,7 +21,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
 # Get golang installed. See: https://stackoverflow.com/questions/52056387/how-to-install-go-in-alpine-linux
-ARG GOLANG_VERSION=1.17
+ARG GOLANG_VERSION=1.18
 RUN wget https://golang.org/dl/go$GOLANG_VERSION.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go$GOLANG_VERSION.linux-amd64.tar.gz
 ENV PATH=$PATH:/usr/local/go/bin
