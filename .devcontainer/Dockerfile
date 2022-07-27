@@ -69,8 +69,8 @@ RUN go install github.com/aquasecurity/tfsec/cmd/tfsec@latest
 RUN which tfsec && tfsec --version
 
 # Copy go installs to vscode user
-ENV PATH=$PATH:/home/vscode/go/bin/
-RUN mkdir -p /home/vscode/go/bin/ && cp -r root/go/bin/* /home/vscode/go/bin/
+ENV PATH=$PATH:/rootgo/bin/
+RUN mkdir -p /rootgo/bin/ && cp -r root/go/bin/* /rootgo/bin/
 
 # Install homebrew
 RUN git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew \
@@ -83,6 +83,6 @@ RUN git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /bin
 
 # Setup aliases
-RUN echo 'alias tf="terraform"' >> /home/vscode/.bashrc \
-&& echo 'alias gc="gcloud"' >> /home/vscode/.bashrc \
-&& echo 'alias j="just"' >> /home/vscode/.bashrc
+RUN echo 'alias tf="terraform"' >> /root.bashrc \
+&& echo 'alias gc="gcloud"' >> /root.bashrc \
+&& echo 'alias j="just"' >> /root.bashrc

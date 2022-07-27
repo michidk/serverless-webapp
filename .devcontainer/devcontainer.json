@@ -40,9 +40,9 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 	"mounts": [
-		"source=${localEnv:HOME}/.aws/,target=/home/vscode/.aws/,type=bind,consistency=delegated",
-		"source=${localEnv:HOME}/.azure/,target=/home/vscode/.azure/,type=bind,consistency=delegated",
-		"source=${localEnv:HOME}/.config/gcloud/,target=/home/vscode/.config/gcloud/,type=bind,consistency=delegated"
+		"source=${localEnv:HOME}/.aws/,target=/root.aws/,type=bind,consistency=delegated",
+		"source=${localEnv:HOME}/.azure/,target=/root.azure/,type=bind,consistency=delegated",
+		"source=${localEnv:HOME}/.config/gcloud/,target=/root.config/gcloud/,type=bind,consistency=delegated"
 	],
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode",
